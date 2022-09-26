@@ -85,13 +85,13 @@ form{
   box-sizing: border-box;
 }
 
-.fa-eye-slash{
+.fa-eye{
     position: absolute;
-    top: 41%;
-    right: 42%;
+    top: 35%;
+    right: 22%;
     cursor: pointer;
     color: lightgray;
-  }
+}
 
 .user-terms{
     margin: 2% auto;
