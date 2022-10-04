@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="task.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.dexchase.com/inc/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
     
     <title>task</title>
 </head>
@@ -20,12 +21,30 @@
             <div class="details">
                 <form>
                     <fieldset>
-                        <input type="text"   name="user-name" placeholder= "&#xf007; FirstName LastName" required class="user-info fontAwesome" id="fullName"  >
-                        <input type="text"   name="user-email" placeholder="&#xf0e0; Email" required class="user-info fontAwesome" id="email">
-                        <div class="password-field"><input type="password"   name="user-password" placeholder="&#xf023; Password" required class="user-info fontAwesome" id="pswd" >
-                            <i class="fa-solid fa-eye fa-1.5x" id="togglePassword"></i></div>
+                       <div class="input-div validate-input mb"> <input type="text"   name="user-name" placeholder= "FirstName LastName" required class="user-info" id="fullName"  >
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-user">
+                            </span>
+                        </span></div>
+                        <div class="input-div validate-input mb"><input type="text"   name="user-email" placeholder="Email" required class="user-info fontAwesome" id="email">
+                            <span class="symbol-input100">
+                                <span class="lnr lnr-envelope">
+                                </span>
+                            </span></div>
+                        <div class="password-field input-div validate-input mb"><input type="password"   name="user-password" placeholder="Password" required class="user-info fontAwesome" id="pswd" >
+                            <i class="fa-solid fa-eye fa-1.5x" id="togglePassword"></i>
+                            <span class="symbol-input100">
+                                <span class="lnr lnr-lock">
+                                </span>
+                            </span>
+                        </div>
                         <p id="message"></p>
-                        <input type="password"   name="user-password-confirm" placeholder="&#xf023; Confirm Password" required class="user-info fontAwesome password-field" id="cpswd"  >
+                        <div class="password-field input-div validate-input mb">
+                        <input type="password"   name="user-password-confirm" placeholder="Confirm Password" required class="user-info fontAwesome password-field" id="cpswd"  >
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-lock">
+                            </span>
+                        </div>
                         <p id="message2"></p>
                     </fieldset>
 
