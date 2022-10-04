@@ -1,7 +1,7 @@
 function validateForm () {
     //declare all variables of interest
     var userName = document.getElementById('fullName').value;
-    var userEmail =document.getElementById('email').value;
+    var userEmail = document.getElementById('email').value;
     var pw1 = document.getElementById('pswd').value;
     var pw2 = document.getElementById('cpswd').value;
 
@@ -59,5 +59,14 @@ function validateForm () {
   togglePassword.addEventListener('click', function (e) {
      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
      password.setAttribute('type', type);
+     this.classList.toggle('fa-eye-slash');
+  });
+
+  const toggleCPassword = document.querySelector('#togglePassword');
+  const cpassword = document.querySelector('#cpswd');
+
+  toggleCPassword.addEventListener('click', function (e) {
+     const type = cpassword.getAttribute('type') === 'password' ? 'text' : 'password';
+     cpassword.setAttribute('type', type);
      this.classList.toggle('fa-eye-slash');
   });
