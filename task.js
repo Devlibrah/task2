@@ -1,21 +1,55 @@
 function validateForm () {
     //declare all variables of interest
     var userName = document.getElementById('fullName').value;
-    var userEmail =document.getElementById('email').value;
+    var userEmail = document.getElementById('email').value;
     var pw1 = document.getElementById('pswd').value;
     var pw2 = document.getElementById('cpswd').value;
 
+    var userNameText, userEmailText, pwmessage, cpwmessage;
+
+    //check empty name field
+    if (userName == ""){
+         userNameText = "Kindly enter your name";
+        userNameError.innerHTML = userNameText;
+        return false
+      }
+     else {
+      userNameText = "";
+      userNameError.innerHTML = userNameText;
+    }
+
+      //check empty email field
+      if (userEmail == ""){
+      userEmailText = "Kindly enter your email";
+       userEmailError.innerHTML = userEmailText;
+       return false
+     }
+    else {
+     userEmailText = "";
+     userEmailError.innerHTML = userEmailText;
+   }
+
       //check empty password field  
       if(pw1 == "") {  
-        document.getElementById("message").innerHTML = "**Fill the password please!";  
-        return false;  
-      } 
+        pwmessage = "Fill the password, please!";
+        message.innerHTML = pwmessage;
+        return false
+      }
+     else {
+      pwmessage = "";
+      message.innerHTML = pwmessage;
+    }
 
        //check empty confirm password field  
-    if(pw2 == "") {  
-        document.getElementById("message2").innerHTML = "**Enter the password please!";  
-        return false;  
+    if(pw2 == "") {   
+        cpwmessage = "Fill the password, please!";
+        message2.innerHTML = cpwmessage;
+        return false
       }
+     else {
+      cpwmessage = "";
+      message2.innerHTML = cpwmessage;
+    }
 
         //minimum password length validation  
     if(pw1.length < 8) {  
@@ -59,5 +93,14 @@ function validateForm () {
   togglePassword.addEventListener('click', function (e) {
      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
      password.setAttribute('type', type);
+     this.classList.toggle('fa-eye-slash');
+  });
+
+  const toggleCPassword = document.querySelector('#togglePassword');
+  const cpassword = document.querySelector('#cpswd');
+
+  toggleCPassword.addEventListener('click', function (e) {
+     const type = cpassword.getAttribute('type') === 'password' ? 'text' : 'password';
+     cpassword.setAttribute('type', type);
      this.classList.toggle('fa-eye-slash');
   });
